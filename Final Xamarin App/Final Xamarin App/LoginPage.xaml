@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Final_Xamarin_App.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <RelativeLayout>
+        <Image Source="https://i.imgur.com/ebBmK9O.jpg"
+            Aspect="AspectFill"
+            RelativeLayout.WidthConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=1}"/>
+
+        <Label x:Name="login" Text="LOGIN" FontSize="50" TextColor="White" 
+            FontAttributes="Bold" HorizontalOptions="CenterAndExpand"
+            RelativeLayout.WidthConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.1}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.15}"/>
+
+        <BoxView
+            Opacity="0.7"
+            CornerRadius="20"
+            BackgroundColor="#fff"
+            RelativeLayout.WidthConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=0.9}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.52}"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=0.05}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.29}"/>
+        <Label x:Name="widcen"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=0.5}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.5}"/>
+
+        <BoxView BackgroundColor="#888" Opacity="0.5" CornerRadius="20"
+            RelativeLayout.WidthConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=0.5}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.062}"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToView, ElementName=widcen,
+            Property=X, Factor=0.5}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.327}"/>
+
+        <BoxView BackgroundColor="#888" Opacity="0.5" CornerRadius="20"
+            RelativeLayout.WidthConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=0.5}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.062}"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToView, ElementName=widcen,
+            Property=X, Factor=0.5}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.4}"/>
+
+        <Entry x:Name = "Username" Placeholder = "Username" WidthRequest="180"
+            PlaceholderColor="#121212" TextColor="#121212" FontSize="18" HorizontalOptions="CenterAndExpand"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToView, ElementName=login,
+            Property=X, Factor=0.85}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.32}"/>
+        <Entry x:Name = "Password" Placeholder = "Password" WidthRequest="180"
+            HeightRequest = "40" IsPassword = "True" PlaceholderColor="#121212" TextColor="#121212" FontSize="18"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToView, ElementName=login,
+            Property=X, Factor=0.85}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.4}"
+                   />
+        <CheckBox 
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToView, ElementName=login,
+            Property=X, Factor=0.8}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.48}"/>
+        <Label Text="Remember Me" TextColor="#121212" FontSize="17" Padding="0,3,0,0"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToView, ElementName=login,
+            Property=X, Factor=1.05}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.482}"/>
+
+        <Button x:Name= "loginbtn" Text = "Login "     
+             HorizontalOptions = "FillAndExpand" CornerRadius="30"
+            BackgroundColor="#171A1A" Opacity="0.75" TextColor="#FFF" FontSize="17"
+            RelativeLayout.WidthConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=0.5}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.062}"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToView, ElementName=widcen,
+            Property=X, Factor=0.5}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.57}"
+            Clicked="loginbtn_Clicked"/>
+
+        <Label Text="Or create a new Account" TextColor="#121212" FontSize="16" 
+            HorizontalOptions="Center" 
+            RelativeLayout.WidthConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=0.5}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.062}"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToView, ElementName=widcen,
+            Property=X, Factor=0.5}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.65}"
+            />
+
+        <Button x:Name= "signupbtn" Text = "Sign Up" 
+            HorizontalOptions = "FillAndExpand" CornerRadius="30"
+            BackgroundColor="#171A1A" Opacity="0.75" TextColor="#fff" FontSize="17"
+            RelativeLayout.WidthConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=0.5}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.062}"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToView, ElementName=widcen,
+            Property=X, Factor=0.5}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.7}"
+            Clicked="signupbtn_clicked"
+            />
+
+    </RelativeLayout>
+
+</ContentPage>

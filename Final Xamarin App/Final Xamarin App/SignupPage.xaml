@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Final_Xamarin_App.SignupPage"
+             NavigationPage.HasNavigationBar="False">
+    <RelativeLayout>
+        <Image Source="https://i.imgur.com/ebBmK9O.jpg"
+            Aspect="AspectFill"
+            RelativeLayout.WidthConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=1}"/>
+        <BoxView
+            Opacity="0.7"
+            CornerRadius="20"
+            BackgroundColor="#fff"
+            RelativeLayout.WidthConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=0.9}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=1}"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=0.05}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0}"/>
+        <StackLayout 
+        Orientation="Vertical" 
+        BackgroundColor="Transparent" 
+        Padding="10,5,10,10"
+        RelativeLayout.WidthConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=0.88}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=1}"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,
+            Property=Width, Factor=0.06}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0}">
+            
+        <Label Text="Sign Up" 
+               FontSize="35" 
+               FontAttributes="Bold" 
+               FontFamily="Lobster-Regular" 
+               TextColor="#121212"
+               HorizontalTextAlignment="Center"/>
+        <Image x:Name="resultImage" 
+               HeightRequest="130" 
+               Source="https://static.vecteezy.com/system/resources/previews/002/640/730/original/default-avatar-placeholder-profile-icon-male-vector.jpg"/>
+        <Button Text="Pick Image" 
+                Clicked="Button_Clicked" 
+                BackgroundColor="#171A1A"
+                TextColor="#fff"
+                CornerRadius="30" 
+                Opacity="0.75"
+                FontAttributes="Bold"/>
+        <StackLayout>
+            <Entry Placeholder="First Name" 
+                   FontSize="20" 
+                   FontAttributes="Bold"/>
+            <Entry Placeholder="Last Name" 
+                   FontSize="20" 
+                   FontAttributes="Bold"/>
+        </StackLayout>
+        <Entry Placeholder="Email" 
+               Keyboard="Email" 
+               FontSize="20" 
+               FontAttributes="Bold"/>
+        <Entry IsPassword="True" 
+               Placeholder="Password" 
+               FontSize="20" 
+               FontAttributes="Bold"/>
+        <Label Text="DOB" 
+               FontSize="20" 
+               FontAttributes="Bold"/>
+        <DatePicker MinimumDate="01/01/1900" 
+                    MaximumDate="01/01/2020"/>
+        <Picker Title="Select Gender" 
+                TitleColor="Gray">
+            <Picker.Items>
+                <x:String>Male</x:String>
+                <x:String>Female</x:String>
+            </Picker.Items>
+        </Picker>
+        <StackLayout Orientation="Horizontal" 
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="EndAndExpand">
+            <Button Text="Back" 
+                    CornerRadius="30" 
+                    TextColor="White"
+                    FontSize="18" 
+                    BackgroundColor="#171A1A"
+                    Clicked="Back_Button_Clicked"
+                    Opacity="0.75"
+                    HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="EndAndExpand"/>
+            <Button Text="Sign Up" 
+                    CornerRadius="30"
+                    TextColor="White"
+                    FontSize="18" 
+                    BackgroundColor="#171A1A"
+                    Clicked="SignUp_Button_Clicked"
+                    Opacity="0.75"
+                    HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+    </RelativeLayout>
+</ContentPage>
